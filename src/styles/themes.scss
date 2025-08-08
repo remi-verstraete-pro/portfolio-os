@@ -1,0 +1,47 @@
+:root {
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --border: #e5e7eb;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+  --accent: #3b82f6;
+  --accent-light: #dbeafe;
+  --desktop-gradient: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --icon-hover: rgba(0, 0, 0, 0.05);
+  --icon-active: rgba(0, 0, 0, 0.1);
+  --login-gradient: linear-gradient(to bottom, #e0f2ff, #f0f9ff);
+  --input-bg: #ffffff;
+  --accent-hover: #1e40af;
+  --hover: rgba(0, 0, 0, 0.05);
+  --taskbar-bg: rgba(255, 255, 255, 0.6);
+  --app-bg: rgba(0, 0, 0, 0.05);
+  --app-hover: rgba(0, 0, 0, 0.1);
+  --app-active: rgba(0, 0, 0, 0.15);
+  --button-bg: rgba(0, 0, 0, 0.05);
+  --button-hover: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg: #1f2937;
+  --surface: #1e293b;
+  --border: #374151;
+  --text: #f9fafb;
+  --text-muted: #9ca3af;
+  --accent: #60a5fa;
+  --accent-light: #1e3a8a;
+  --desktop-gradient: linear-gradient(to bottom right, #1e293b, #0f172a);
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  --icon-hover: rgba(255, 255, 255, 0.08);
+  --icon-active: rgba(255, 255, 255, 0.15);
+  --login-gradient: linear-gradient(to bottom, #1e293b, #111827);
+  --input-bg: #1f2937;
+  --accent-hover: #1d4ed8;
+  --hover: rgba(255, 255, 255, 0.08);
+  --taskbar-bg: rgba(40, 40, 40, 0.75);
+  --app-bg: rgba(255, 255, 255, 0.08);
+  --app-hover: rgba(255, 255, 255, 0.15);
+  --app-active: rgba(255, 255, 255, 0.2);
+  --button-bg: rgba(255, 255, 255, 0.05);
+  --button-hover: rgba(255, 255, 255, 0.12);
+}

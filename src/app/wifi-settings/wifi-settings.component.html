@@ -1,0 +1,47 @@
+<div class="quick-settings" @fadeSlide>
+  <!-- Toggle principal -->
+  <div class="setting-item">
+    <label for="wifi-toggle">
+      <span class="wifi-icon">📡</span>
+      <span class="wifi-label">Wi‑Fi</span>
+    </label>
+    <label class="switch">
+      <input
+        type="checkbox"
+        id="wifi-toggle"
+        [checked]="wifiEnabled"
+        (change)="toggleWifi()"
+      />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- Liste de réseaux (une seule ligne par réseau) -->
+  @if (wifiEnabled) {
+    @for (net of networks; track $index) {
+      <div class="setting-item">
+        <div class="wifi-network">
+          <span class="wifi-icon">📶</span>
+          <label>{{ net }}</label>
+        </div>
+
+        <button
+          class="btn-connect"
+          [disabled]="
+            !wifiEnabled || (!!loadingNetwork && loadingNetwork !== net)
+          "
+          (click)="connect(net)"
+          [attr.aria-pressed]="connectedNetwork === net"
+        >
+          @if (loadingNetwork === net) {
+            <span class="dots inline-dots" aria-label="Connexion en cours">
+              <span></span><span></span><span></span>
+            </span>
+          } @else {
+            {{ connectedNetwork === net ? "✅" : "⬛" }}
+          }
+        </button>
+      </div>
+    }
+  }
+</div>

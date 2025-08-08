@@ -1,0 +1,20 @@
+<div
+  class="login-screen"
+  *ngIf="!loggedIn"
+  @slideScreen
+>
+  <form class="login-box" (submit)="onSubmit($event)">
+
+    <h2>Bienvenue</h2>
+    <input
+      type="text"
+      [(ngModel)]="username"
+      name="username"
+      placeholder="Entrez votre nom"
+      required
+      autofocus
+      (keydown.enter)="onSubmit()"
+    />
+    <button type="button" (click)="onSubmit()">Se connecter</button>
+  </form>
+</div>

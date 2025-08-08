@@ -1,0 +1,29 @@
+<div
+  class="window"
+  [class.minimized]="isMinimized"
+  [class.maximized]="isMaximized"
+  [ngStyle]="{
+    top: isMaximized ? '0px' : position.top + 'px',
+    left: isMaximized ? '0px' : position.left + 'px',
+    width: isMaximized ? '100%' : size.width + 'px',
+    height: isMaximized ? 'calc(100vh - 48px)' : size.height + 'px',
+    'z-index': zIndex
+  }"
+>
+
+  <div class="window-header">
+  <span class="title">{{ title }}</span>
+  <div class="window-controls">
+    <button (click)="minimize()" title="Minimiser">🗕</button>
+    <button (click)="toggleMaximize()" title="Agrandir / Restaurer">
+      {{ isMaximized ? '🗗' : '🗖' }}
+    </button>
+    <button (click)="closed.emit()" title="Fermer">✖</button>
+  </div>
+</div>
+
+  <div class="window-body">
+    <p>Contenu de {{ title }}</p>
+  </div>
+  <div class="resizer"></div>
+</div>

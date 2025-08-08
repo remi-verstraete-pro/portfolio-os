@@ -1,0 +1,22 @@
+<div class="calendar-popup-animated">
+  <div class="calendar-header">
+    <button (click)="prevMonth()">←</button>
+    <span>{{ monthYear }}</span>
+    <button (click)="nextMonth()">→</button>
+  </div>
+
+  <div class="calendar-grid">
+    <div class="calendar-day" *ngFor="let d of ['L', 'M', 'M', 'J', 'V', 'S', 'D']">{{ d }}</div>
+
+    @for (week of weeks; track $index) {
+      @for (day of week; track $index) {
+        <div
+          class="calendar-cell"
+          [class.today]="day && isToday(day)"
+        >
+          {{ day?.getDate() || '' }}
+        </div>
+      }
+    }
+  </div>
+</div>

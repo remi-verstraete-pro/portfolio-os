@@ -1,0 +1,14 @@
+.desktop-area {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-content: start;
+  justify-content: start;
+  padding: 0 20px 0 20px;
+  height: calc(100vh - 100px);
+
+  background: var(--desktop-gradient);
+  background-size: cover;
+  background-position: center;
+  transition: background 0.3s ease;
+}

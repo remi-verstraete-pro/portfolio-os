@@ -1,0 +1,34 @@
+<div class="quick-settings fade-in-up">
+  <div class="setting-item">
+    <label for="theme-toggle">
+      @if (isDarkTheme) {
+        🌜 Thème sombre
+      } @else {
+        🌞 Thème clair
+      }
+    </label>
+    <label class="switch">
+      <input
+        type="checkbox"
+        id="theme-toggle"
+        [checked]="isDarkTheme"
+        (change)="toggleTheme()"
+      />
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="setting-item">
+    <label for="language-toggle"
+      >🌐 {{ isFRlanguage ? "Français" : "English" }}</label
+    >
+    <label class="switch">
+      <input
+        type="checkbox"
+        id="language-toggle"
+        [checked]="isFRlanguage"
+        (change)="toggleLanguage()"
+      />
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>

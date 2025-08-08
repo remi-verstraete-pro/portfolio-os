@@ -1,0 +1,44 @@
+<app-top-bar [username]="username" />
+
+<div class="desktop-area">
+  @for (appli of listApplis; track $index) {
+    @if (languageService.language() === "fr") {
+      <app-desktop-icon
+        [label]="appli.label_fr"
+        [icon]="appli.icon"
+        (click)="openWindow(appli)"
+      />
+    } @else {
+      <app-desktop-icon
+        [label]="appli.label_en"
+        [icon]="appli.icon"
+        (click)="openWindow(appli)"
+      />
+    }
+  }
+</div>
+
+@for (win of openedWindows(); track $index) {
+  <app-window
+    [id]="win['icon']"
+    [title]="
+      languageService.language() === 'fr' ? win['label_fr'] : win['label_en']
+    "
+    [position]="getWindowPosition(win)"
+    [size]="getWindowSize(win)"
+    [zIndex]="getZIndex(win)"
+    [isMinimized]="windowMinimized()[win['icon']]"
+    (focusWindow)="bringToFront(win)"
+    (positionChanged)="setWindowPosition(win, $event)"
+    (sizeChanged)="setWindowSize(win, $event)"
+    (closed)="closeWindow(win)"
+    (minimizeRequest)="minimizeWindow(win)"
+  />
+}
+
+<app-taskbar
+  [windows]="openedWindows()"
+  [focused]="focusedWindow()"
+  (focusRequest)="openWindow($event)"
+  (logoutRequested)="logoutRequested.emit()"
+/>

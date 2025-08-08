@@ -1,0 +1,14 @@
+<div class="quick-settings">
+  <div class="setting-item">
+    <label for="volume" class="volume-level">{{ volumeLevel }}</label>
+    <input
+      id="volume"
+      type="range"
+      min="0"
+      max="100"
+      [value]="volume"
+      (input)="updateVolume($event)"
+    />
+    <span>{{ volume }}%</span>
+  </div>
+</div>

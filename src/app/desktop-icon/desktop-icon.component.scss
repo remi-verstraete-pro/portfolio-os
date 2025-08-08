@@ -1,0 +1,34 @@
+.desktop-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  border-radius: 10px;
+  padding: 6px;
+  font-weight: 500;
+  line-height: 1.2;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  backdrop-filter: blur(4px);
+  background-color: transparent;
+}
+
+.desktop-icon:hover {
+  background-color: var(--icon-hover);
+}
+
+.desktop-icon:active {
+  background-color: var(--icon-active);
+}
+
+.icon {
+  font-size: xx-large;
+}

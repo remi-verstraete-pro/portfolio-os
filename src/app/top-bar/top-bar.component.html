@@ -1,0 +1,45 @@
+<div class="top-bar">
+  <div class="top-bar-left">
+    <span class="app-title">Portfolio OS</span>
+  </div>
+  <div class="top-bar-right">
+    <button class="icon-button" (click)="toggleVolumePopup($event)">🔊</button>
+    <button
+      class="icon-button"
+      (click)="toggleWifiPopup($event)"
+      aria-label="Wi-Fi"
+    >
+      📶
+    </button>
+    <span class="user-name">{{ username }}</span>
+    <button class="icon-button" (click)="toggleQuickSettings()">⚙️</button>
+  </div>
+</div>
+@if (quickSettingsOpen) {
+  <app-quick-settings 
+    @fadeSlide
+  />
+}
+@if (volumeOpen) {
+  <div
+      class="volume-popup"
+      (clickOutside)="closeVolumePopup()"
+    >
+    <app-volume-control (click)="$event.stopPropagation()"></app-volume-control>
+  </div>
+}
+
+@if (wifiOpen) {
+  <div
+      class="wifi-popup"
+      (clickOutside)="closeWifiPopup()"
+    >
+      <app-wifi-settings 
+        @fadeSlide 
+        (click)="$event.stopPropagation()"
+      >
+      </app-wifi-settings>
+  </div>
+}
+
+

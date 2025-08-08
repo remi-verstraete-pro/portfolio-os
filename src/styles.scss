@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/themes"; // ⚠️ Tu pourras le migrer vers @use plus tard
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* ===================
+   💠 Aurora OS Window
+   =================== */
+.window {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  width: 300px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  z-index: 1001;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 12px;
+  font-weight: 500;
+  cursor: move;
+  user-select: none;
+}
+
+.window-body {
+  padding: 14px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Close / Min / Max buttons */
+.window-header button {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  margin-left: 6px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+/* ==== FadeInUp/FadeOutDown – utilitaires CSS only ==== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* Utilitaire à poser sur le conteneur de la popup (ex: .quick-settings) */
+.fade-in-up {
+  /* Durées et easing proches de ton calendar-popup-animated */
+  animation: fadeInUp 200ms ease-out both;
+  will-change: transform, opacity;
+}
+
+/* (Optionnel) Animation de sortie si tu poses .is-closing avant de cacher la popup */
+.fade-in-up.is-closing {
+  animation: fadeOutDown 150ms ease-in forwards;
+}
+
+/* Respecte l’accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up,
+  .fade-in-up.is-closing {
+    animation: none !important;
+  }
+}

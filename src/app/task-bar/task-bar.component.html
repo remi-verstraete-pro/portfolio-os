@@ -1,0 +1,43 @@
+<div class="taskbar">
+  <div class="taskbar-left">
+    <div class="start-button" (click)="toggleStartMenu()">🟦</div>
+
+    @if (startMenuOpen) {
+      <app-start-menu (logout)="handleLogout()" />
+    }
+
+    <div class="taskbar-apps">
+      @for (win of windows; track $index) {
+        <span
+          class="taskbar-app"
+          [class.active]="win['icon'] === focused"
+          (click)="focusRequest.emit(win)"
+        >
+          <span class="icon">{{ win["icon"] }}</span>
+          <span class="label">{{
+            languageService.language() === "fr"
+              ? win["label_fr"]
+              : win["label_en"]
+          }}</span>
+        </span>
+      }
+    </div>
+  </div>
+
+  <div class="taskbar-right">
+    <div class="clock-container" (click)="toggleCalendar()">
+      <div class="clock-hour">{{ currentTime() }}</div>
+      <div class="clock-date">{{ currentDate() }}</div>
+    </div>
+
+    <div
+      #calendarContainer
+      class="calendar-popup"
+      *ngIf="calendarVisible"
+      [class.fade-out]="!showCalendar"
+      [class.fade-in]="showCalendar"
+    >
+      <app-calendar />
+    </div>
+  </div>
+</div>
