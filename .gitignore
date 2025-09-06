@@ -6,7 +6,6 @@ package-lock.json
 yarn.lock
 
 # Build Angular
-dist/
 tmp/
 out-tsc/
 
