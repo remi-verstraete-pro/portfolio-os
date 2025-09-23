@@ -1,59 +1,56 @@
-# PortfolioOs
+# 💻 Portfolio OS – Remi Verstraete
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+Un portfolio interactif développé avec **Angular** qui simule un **système d’exploitation de bureau**.  
+Chaque application/icône correspond à une fonctionnalité (CV, calendrier, paramètres, etc.), et s’ouvre dans une fenêtre flottante comme dans un vrai OS.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Fonctionnalités
+
+- Bureau interactif avec icônes et fenêtres
+- Système de gestion de fenêtres (déplacement, redimensionnement, fermeture)
+- Menu Démarrer, barre des tâches et barre supérieure
+- Écran de connexion simulé
+- Applications intégrées :
+  - **CV** (en cours d’implémentation, avec données issues du PDF)
+  - **Calendrier**
+  - **Paramètres rapides (Wi-Fi, volume, etc.)**
+  - … et autres modules personnalisables
+
+---
+
+## 🛠️ Stack technique
+
+- **Framework** : Angular 20+
+- **Langage** : TypeScript
+- **Style** : SCSS
+- **Gestion de dépendances** : npm
+- **Organisation** :
+  - `src/app/desktop/` → bureau principal
+  - `src/app/desktop-icon/` → composant icône
+  - `src/app/window/` → gestion des fenêtres
+  - `src/app/...` → applications (CV, calendrier, etc.)
+  - `src/assets/` → ressources statiques (icônes, données JSON, etc.)
+
+---
+
+## 📦 Installation & utilisation
+
+### 1. Cloner le repo
+
+```bash
+git clone https://github.com/remi-verstraete-pro/portfolio-os.git
+cd portfolio-os
+```
+
+### 2. Installer les dépendances
+
+```bash
+npm install
+```
+
+### 3. Lancer l’application
 
 ```bash
 ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
