@@ -4,12 +4,14 @@
   @for (appli of listApplis; track $index) {
     @if (languageService.language() === "fr") {
       <app-desktop-icon
+        class="desktop-icon"
         [label]="appli.label_fr"
         [icon]="appli.icon"
         (click)="openWindow(appli)"
       />
     } @else {
       <app-desktop-icon
+        class="desktop-icon"
         [label]="appli.label_en"
         [icon]="appli.icon"
         (click)="openWindow(appli)"
