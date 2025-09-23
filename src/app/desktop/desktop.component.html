@@ -2,34 +2,26 @@
 
 <div class="desktop-area">
   @for (appli of listApplis; track $index) {
-    @if (languageService.language() === "fr") {
-      <app-desktop-icon
-        class="desktop-icon"
-        [label]="appli.label_fr"
-        [icon]="appli.icon"
-        (click)="openWindow(appli)"
-      />
-    } @else {
-      <app-desktop-icon
-        class="desktop-icon"
-        [label]="appli.label_en"
-        [icon]="appli.icon"
-        (click)="openWindow(appli)"
-      />
-    }
+    <app-desktop-icon
+      class="desktop-icon"
+      [label]="
+        languageService.language() === 'fr' ? appli.label_fr : appli.label_en
+      "
+      [icon]="appli.icon"
+      (click)="openWindow(appli)"
+    />
   }
 </div>
 
 @for (win of openedWindows(); track $index) {
   <app-window
-    [id]="win['icon']"
-    [title]="
-      languageService.language() === 'fr' ? win['label_fr'] : win['label_en']
-    "
+    [id]="win.icon"
+    [title]="languageService.language() === 'fr' ? win.label_fr : win.label_en"
     [position]="getWindowPosition(win)"
     [size]="getWindowSize(win)"
     [zIndex]="getZIndex(win)"
-    [isMinimized]="windowMinimized()[win['icon']]"
+    [isMinimized]="windowMinimized()[win.icon]"
+    [component]="win.component"
     (focusWindow)="bringToFront(win)"
     (positionChanged)="setWindowPosition(win, $event)"
     (sizeChanged)="setWindowSize(win, $event)"

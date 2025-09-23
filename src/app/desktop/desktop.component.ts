@@ -11,7 +11,7 @@ import { TopBarComponent } from '../top-bar/top-bar.component';
 import { DesktopIconComponent } from '../desktop-icon/desktop-icon.component';
 import { TaskBarComponent } from '../task-bar/task-bar.component';
 import { WindowComponent } from '../window/window.component';
-import { listApplis } from './desktop.config';
+import { DESKTOP_ICONS as listApplis } from './desktop.config';
 import { DesktopIconModel } from '../desktop-icon/desktop-icon.model';
 import { LanguageService } from '../core/language.service';
 

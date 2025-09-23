@@ -7,23 +7,24 @@
     left: isMaximized ? '0px' : position.left + 'px',
     width: isMaximized ? '100%' : size.width + 'px',
     height: isMaximized ? 'calc(100vh - 48px)' : size.height + 'px',
-    'z-index': zIndex
+    'z-index': zIndex,
   }"
 >
-
   <div class="window-header">
-  <span class="title">{{ title }}</span>
-  <div class="window-controls">
-    <button (click)="minimize()" title="Minimiser">🗕</button>
-    <button (click)="toggleMaximize()" title="Agrandir / Restaurer">
-      {{ isMaximized ? '🗗' : '🗖' }}
-    </button>
-    <button (click)="closed.emit()" title="Fermer">✖</button>
+    <span class="title">{{ title }}</span>
+    <div class="window-controls">
+      <button (click)="minimize()" title="Minimiser">🗕</button>
+      <button (click)="toggleMaximize()" title="Agrandir / Restaurer">
+        {{ isMaximized ? "🗗" : "🗖" }}
+      </button>
+      <button (click)="closed.emit()" title="Fermer">✖</button>
+    </div>
   </div>
-</div>
 
   <div class="window-body">
-    <p>Contenu de {{ title }}</p>
+    @if (component) {
+      <ng-container [ngComponentOutlet]="component"></ng-container>
+    }
   </div>
   <div class="resizer"></div>
 </div>

@@ -5,6 +5,7 @@ import {
   Input,
   Output,
   AfterViewInit,
+  Type,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -22,6 +23,7 @@ export class WindowComponent implements AfterViewInit {
   @Input() size!: { width: number; height: number };
   @Input() isMinimized: boolean = false;
   @Input() zIndex: number = 1001;
+  @Input() component?: Type<any>;
 
   @Output() closed = new EventEmitter<void>();
   @Output() positionChanged = new EventEmitter<{ top: number; left: number }>();
@@ -51,9 +53,8 @@ export class WindowComponent implements AfterViewInit {
     resizer.addEventListener('mousedown', this.onResizeStart);
 
     this.el.nativeElement.addEventListener('mousedown', () => {
-    this.focusWindow.emit();
-  });
-
+      this.focusWindow.emit();
+    });
   }
 
   minimize() {
@@ -115,5 +116,4 @@ export class WindowComponent implements AfterViewInit {
   toggleMaximize() {
     this.isMaximized = !this.isMaximized;
   }
-
 }

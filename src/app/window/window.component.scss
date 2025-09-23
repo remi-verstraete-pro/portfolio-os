@@ -19,7 +19,9 @@
   z-index: 1001;
   overflow: hidden;
   animation: fadeInWindow 0.25s ease-out;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 @keyframes fadeInWindow {
