@@ -1,0 +1,141 @@
+{
+  "nom": "REMI VERSTRAETE",
+  "poste": "Chef de projet Web",
+  "portfolio": "https://remi-verstraete-pro.github.io/portfolio-os/",
+  "description": "Motivé, rigoureux et curieux, je souhaite mettre mes compétences au service de vos projets. Autonome et désireux de relever de nouveaux défis, je suis prêt à m’investir afin de contribuer activement à leur succès.",
+  "experiences_professionnelles": [
+    {
+      "periode": "Depuis avr. 2022",
+      "poste": "Concepteur / Développeur",
+      "entreprise": "Numih France",
+      "lieu": "Amiens",
+      "missions": [
+        "Développement basé sur un système front (Angular) et back (Symfony)",
+        "Administration de bases de données (Oracle)",
+        "Gestion de systèmes de déploiement automatisés et versionning (CI/CD sous GitLab)",
+        "Administration serveurs (AIX et Linux)",
+        "Gestion de la sécurité via SSO en OpenID Connect",
+        "Conduite de projet avec la méthode Agile"
+      ]
+    },
+    {
+      "periode": "De nov. 2021 à avr. 2022",
+      "poste": "Freelance développeur web",
+      "entreprise": "À mon compte",
+      "lieu": "Amiens et remote",
+      "missions": [
+        "Création et développement web (CMS, Framework, etc.)",
+        "Maintenance de matériel informatique",
+        "Community management"
+      ]
+    },
+    {
+      "periode": "De sept. 2020 à sept. 2021",
+      "poste": "Alternant développeur web",
+      "entreprise": "Baie de Somme Habitat",
+      "lieu": "Abbeville",
+      "missions": [
+        "Refonte graphique et fonctionnelle du site internet",
+        "Prise en charge complète de la gestion et du développement du projet",
+        "Mise en production réussie avec haut niveau de satisfaction des utilisateurs"
+      ]
+    },
+    {
+      "periode": "D'avr. 2020 à sept. 2020",
+      "poste": "Développeur Web",
+      "entreprise": "TPP GROUP",
+      "lieu": "Boves",
+      "missions": [
+        "Développement d'un site de e-commerce B2C et personnalisation produits",
+        "Création d'un module pour la création de design en ligne"
+      ]
+    },
+    {
+      "periode": "D'oct. 2018 à août 2019",
+      "poste": "Développeur",
+      "entreprise": "CROUS",
+      "lieu": "Amiens, France",
+      "missions": [
+        "Développement et mise en oeuvre d'un agent conversationnel",
+        "NodeJS & DialogFlow"
+      ]
+    }
+  ],
+  "formations": [
+    {
+      "periode": "De sept. 2019 à sept. 2021",
+      "diplome": "Master Méthodes Informatiques appliquées à la gestion des entreprises",
+      "universite": "Université de Picardie Jules Verne",
+      "lieu": "Amiens, France",
+      "parcours": "Système d'Information Ouverts (SIO)"
+    },
+    {
+      "periode": "De sept. 2018 à juin 2019",
+      "diplome": "Licence professionnelle Réseau et Génie Informatique",
+      "universite": "Institut Universitaire de Technologie",
+      "lieu": "Amiens, France",
+      "remarque": "Diplôme réalisé en alternance au CROUS Amiens. Option Web Avancé"
+    },
+    {
+      "periode": "De sept. 2016 à juin 2018",
+      "diplome": "DUT Informatique",
+      "universite": "Institut Universitaire de Technologie",
+      "lieu": "Amiens, France",
+      "specialisation": "CMS Web"
+    }
+  ],
+  "informations_personnelles": {
+    "adresse": "2 rue Jeanne Natière, 80000 Amiens, FRANCE",
+    "age": 27,
+    "linkedin": "@remi-verstraete",
+    "vehicule": "Véhicule personnel",
+    "telephone": "07 78 38 81 61"
+  },
+  "competences": {
+    "front_end": ["Angular (v9+)", "TypeScript", "HTML5", "CSS3", "SCSS"],
+    "back_end": ["PHP 8", "Symfony 4/5/6", "API Platform"],
+    "base_de_donnees": ["MySQL", "Oracle"],
+    "outils_devops": ["Git", "GitLab CI/CD", "Docker", "Linux"],
+    "methodologies": ["Agile/Scrum", "Clean Code", "SOLID"],
+    "langues": [
+      {
+        "langue": "Français",
+        "niveau": "Natif"
+      },
+      {
+        "langue": "Anglais",
+        "niveau": "Professionnel (B2)"
+      }
+    ]
+  },
+  "atouts": [
+    "Rigueur et sens du détail",
+    "Capacité à travailler en équipe et en autonomie",
+    "Adaptabilité face aux contraintes métier",
+    "Bonne communication",
+    "Esprit d’analyse et résolution de problèmes",
+    "Curiosité technologique"
+  ],
+  "projets_personnels": [
+    {
+      "nom": "thesesalmabanana/accio-comments",
+      "description": "Outil Python de scraping de commentaires par mots-clés sur plusieurs plateformes, pour collecter des données liées à un sujet spécifique",
+      "url": "https://github.com/thesesalmabanana/accio-comments"
+    },
+    {
+      "nom": "thesesalmabanana/pretraitements-nlp",
+      "description": "Pipeline modulaire de prétraitement de texte, modélisation thématique avec BERTopic et visualisation interactive via Streamlit",
+      "url": "https://github.com/thesesalmabanana/pretraitements-nlp"
+    },
+    {
+      "nom": "remi-verstraete-pro/portfolio-os (WIP)",
+      "description": "Application Angular (v20) en cours de développement, conçue comme un portfolio interactif sous forme de système d’exploitation",
+      "url": "https://github.com/remi-verstraete-pro/portfolio-os"
+    },
+    {
+      "nom": "Thesebanana/analyse-sentiments-BERT",
+      "description": "Création d'une interface d'analyse de sentiments et d'émotions sur un jeu de données. Utilisation de Streamlit et intégration de divers modèles présents sur Hugging Face",
+      "url": "https://huggingface.co/spaces/Thesebanana/analyse-sentiments-BERT/tree/main"
+    }
+  ]
+}
