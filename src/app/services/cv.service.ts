@@ -1,17 +1,22 @@
-import { Injectable } from '@angular/core';
-import cvData from '../../assets/cv.json';
+import { computed, inject, Injectable } from '@angular/core';
+import cvDataFr from '../../assets/cv.fr.json';
+import cvDataEn from '../../assets/cv.en.json';
+import { LanguageService } from '../core/language.service';
+
+export type CV = typeof cvDataFr;
 
 @Injectable({
   providedIn: 'root',
 })
 export class CvService {
-  private cv: CV = cvData as CV;
+  private langService = inject(LanguageService);
 
   constructor() {}
 
-  getCv(): CV {
-    return this.cv;
-  }
+  readonly cv = computed<CV>(() => {
+    const lang = this.langService.language();
+    return lang === 'en' ? (cvDataEn as CV) : (cvDataFr as CV);
+  });
 }
 
 export interface Experience {
@@ -51,14 +56,16 @@ export interface Competences {
   base_de_donnees?: string[];
   outils_devops?: string[];
   methodologies?: string[];
+  langues?: Langue[];
 }
 
 export interface ProjetPersonnel {
   nom: string;
   description: string;
+  url: string;
 }
 
-export interface CV {
+export interface CVInfos {
   nom: string;
   poste: string;
   portfolio: string;

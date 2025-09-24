@@ -84,16 +84,6 @@
       "specialisation": "CMS Web"
     }
   ],
-  "langues": [
-    {
-      "langue": "Français",
-      "niveau": "Natif"
-    },
-    {
-      "langue": "Anglais",
-      "niveau": "Professionnel (B2)"
-    }
-  ],
   "informations_personnelles": {
     "adresse": "2 rue Jeanne Natière, 80000 Amiens, FRANCE",
     "age": 27,
@@ -106,7 +96,17 @@
     "back_end": ["PHP 8", "Symfony 4/5/6", "API Platform"],
     "base_de_donnees": ["MySQL", "Oracle"],
     "outils_devops": ["Git", "GitLab CI/CD", "Docker", "Linux"],
-    "methodologies": ["Agile/Scrum", "Clean Code", "SOLID"]
+    "methodologies": ["Agile/Scrum", "Clean Code", "SOLID"],
+    "langues": [
+      {
+        "langue": "Français",
+        "niveau": "Natif"
+      },
+      {
+        "langue": "Anglais",
+        "niveau": "Professionnel (B2)"
+      }
+    ]
   },
   "atouts": [
     "Rigueur et sens du détail",
@@ -119,19 +119,23 @@
   "projets_personnels": [
     {
       "nom": "thesesalmabanana/accio-comments",
-      "description": "Outil Python de scraping de commentaires par mots-clés sur plusieurs plateformes, pour collecter des données liées à un sujet spécifique"
+      "description": "Outil Python de scraping de commentaires par mots-clés sur plusieurs plateformes, pour collecter des données liées à un sujet spécifique",
+      "url": "https://github.com/thesesalmabanana/accio-comments"
     },
     {
       "nom": "thesesalmabanana/pretraitements-nlp",
-      "description": "Pipeline modulaire de prétraitement de texte, modélisation thématique avec BERTopic et visualisation interactive via Streamlit"
+      "description": "Pipeline modulaire de prétraitement de texte, modélisation thématique avec BERTopic et visualisation interactive via Streamlit",
+      "url": "https://github.com/thesesalmabanana/pretraitements-nlp"
     },
     {
       "nom": "remi-verstraete-pro/portfolio-os (WIP)",
-      "description": "Application Angular (v20) en cours de développement, conçue comme un portfolio interactif sous forme de système d’exploitation"
+      "description": "Application Angular (v20) en cours de développement, conçue comme un portfolio interactif sous forme de système d’exploitation",
+      "url": "https://github.com/remi-verstraete-pro/portfolio-os"
     },
     {
       "nom": "Thesebanana/analyse-sentiments-BERT",
-      "description": "Création d'une interface d'analyse de sentiments et d'émotions sur un jeu de données. Utilisation de Streamlit et intégration de divers modèles présents sur Hugging Face"
+      "description": "Création d'une interface d'analyse de sentiments et d'émotions sur un jeu de données. Utilisation de Streamlit et intégration de divers modèles présents sur Hugging Face",
+      "url": "https://huggingface.co/spaces/Thesebanana/analyse-sentiments-BERT/tree/main"
     }
   ]
 }

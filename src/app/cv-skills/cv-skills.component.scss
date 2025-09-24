@@ -1,0 +1,36 @@
+.cv-skills {
+  padding: 1rem;
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
+
+  .skills-section {
+    margin-bottom: 1rem;
+
+    h3 {
+      margin: 0.3rem 0;
+      font-size: 1.1rem;
+      color: #4da3ff;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      li {
+        margin: 0.2rem 0;
+      }
+    }
+  }
+
+  .atouts {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+    li {
+      margin: 0.2rem 0;
+    }
+  }
+}

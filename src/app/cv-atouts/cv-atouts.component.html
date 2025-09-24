@@ -1,0 +1,9 @@
+<div class="cv-atouts">
+  <h2>{{ this.langService.language() == "fr" ? "Atouts" : "Assets" }}</h2>
+
+  <ul>
+    @for (atout of cv().atouts; track $index) {
+      <li>⭐ {{ atout }}</li>
+    }
+  </ul>
+</div>

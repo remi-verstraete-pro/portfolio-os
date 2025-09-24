@@ -1,0 +1,25 @@
+.cv-atouts {
+  padding: 1rem;
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 0.4rem 0;
+      font-size: 1.05rem;
+
+      &:before {
+        content: "✓ ";
+        color: #4da3ff;
+      }
+    }
+  }
+}
