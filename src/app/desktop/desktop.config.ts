@@ -4,13 +4,16 @@ import { CvExperiencesComponent } from '../cv-experiences/cv-experiences.compone
 import { CvProjectsComponent } from '../cv-projects/cv-projects.component';
 import { CvSkillsComponent } from '../cv-skills/cv-skills.component';
 import { DesktopIconModel } from '../desktop-icon/desktop-icon.model';
+import { PdfViewerComponent } from '../pdf-viewer/pdf-viewer.component';
 
 export const DESKTOP_ICONS: DesktopIconModel[] = [
-  // {
-  //   label_fr: 'CV',
-  //   label_en: 'CV',
-  //   icon: '📄',
-  // },
+  {
+    id: 'cv-pdf',
+    label_fr: 'CV',
+    label_en: 'CV',
+    icon: '📄',
+    component: PdfViewerComponent,
+  },
   // {
   //   label_fr: 'Portfolio',
   //   label_en: 'Portfolio',
