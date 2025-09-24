@@ -1,0 +1,18 @@
+@if (pdfSrc) {
+  <div class="pdf-container">
+    <object [data]="pdfSrc" type="application/pdf" class="pdf-object">
+      <p>
+        {{
+          this.langService.language() == "fr"
+            ? "PDF non supporté par votre navigateur"
+            : "PDF not supported by your browser"
+        }}
+        <a [href]="pdfSrc" target="_blank">{{
+          this.langService.language() == "fr" ? "Télécharger" : "Download"
+        }}</a>
+      </p>
+    </object>
+  </div>
+} @else {
+  <p>No PDF available...</p>
+}
