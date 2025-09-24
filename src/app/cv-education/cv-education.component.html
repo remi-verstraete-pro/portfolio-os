@@ -1,0 +1,22 @@
+<div class="cv-education">
+  <h2>{{ this.langService.language() == "fr" ? "Formation" : "Education" }}</h2>
+
+  @for (formation of cv().formations; track $index) {
+    <div class="formation">
+      <h3>{{ formation.diplome }}</h3>
+      <p class="universite">
+        {{ formation.universite }} – {{ formation.lieu }}
+      </p>
+      <p class="periode">{{ formation.periode }}</p>
+      @if (formation.parcours) {
+        <p>Parcours : {{ formation.parcours }}</p>
+      }
+      @if (formation.remarque) {
+        <p>Remarque : {{ formation.remarque }}</p>
+      }
+      @if (formation.specialisation) {
+        <p>Spécialisation : {{ formation.specialisation }}</p>
+      }
+    </div>
+  }
+</div>

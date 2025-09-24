@@ -1,0 +1,25 @@
+<div class="cv-projects">
+  <h2>
+    {{
+      this.langService.language() == "fr"
+        ? "Projets personnels"
+        : "Personal projects"
+    }}
+  </h2>
+
+  @for (p of cv().projets_personnels; track $index) {
+    <div class="project-card">
+      <h3>{{ p.nom }}</h3>
+      <p>{{ p.description }}</p>
+      @if (p.url) {
+        <button (click)="openProject(p)">
+          {{
+            this.langService.language() == "fr"
+              ? "Voir le projet"
+              : "See project"
+          }}
+        </button>
+      }
+    </div>
+  }
+</div>

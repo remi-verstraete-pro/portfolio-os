@@ -1,0 +1,22 @@
+<div class="cv-experiences">
+  <h2>
+    {{
+      this.langService.language() == "fr"
+        ? "Experiences professionnelles"
+        : "Professional experiences"
+    }}
+  </h2>
+
+  @for (exp of cv().experiences_professionnelles; track $index) {
+    <div class="experience">
+      <h3>{{ exp.poste }} – {{ exp.entreprise }}</h3>
+      <p class="periode">{{ exp.periode }} | {{ exp.lieu }}</p>
+
+      <ul class="missions">
+        @for (mission of exp.missions; track $index) {
+          <li>{{ mission }}</li>
+        }
+      </ul>
+    </div>
+  }
+</div>

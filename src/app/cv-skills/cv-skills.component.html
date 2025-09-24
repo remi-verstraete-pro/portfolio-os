@@ -1,0 +1,87 @@
+<div class="cv-skills">
+  <h2>{{ this.langService.language() == "fr" ? "Compétences" : "Skills" }}</h2>
+
+  @if (competences?.front_end?.length) {
+    <div class="skills-section">
+      <h3>Front-end</h3>
+      <ul>
+        @for (skill of competences?.front_end; track $index) {
+          <li>{{ skill }}</li>
+        }
+      </ul>
+    </div>
+  }
+
+  @if (competences?.back_end?.length) {
+    <div class="skills-section">
+      <h3>Back-end</h3>
+      <ul>
+        @for (skill of competences?.back_end; track $index) {
+          <li>{{ skill }}</li>
+        }
+      </ul>
+    </div>
+  }
+
+  @if (competences?.base_de_donnees?.length) {
+    <div class="skills-section">
+      <h3>
+        {{
+          this.langService.language() == "fr" ? "Base de données" : "Database"
+        }}
+      </h3>
+      <ul>
+        @for (skill of competences?.base_de_donnees; track $index) {
+          <li>{{ skill }}</li>
+        }
+      </ul>
+    </div>
+  }
+
+  @if (competences?.outils_devops?.length) {
+    <div class="skills-section">
+      <h3>
+        {{
+          this.langService.language() == "fr"
+            ? "Outils et DevOps"
+            : "Tools and DevOps"
+        }}
+      </h3>
+      <ul>
+        @for (skill of competences?.outils_devops; track $index) {
+          <li>{{ skill }}</li>
+        }
+      </ul>
+    </div>
+  }
+
+  @if (competences?.methodologies?.length) {
+    <div class="skills-section">
+      <h3>
+        {{
+          this.langService.language() == "fr"
+            ? "Méthodologies"
+            : "Methodologies"
+        }}
+      </h3>
+      <ul>
+        @for (skill of competences?.methodologies; track $index) {
+          <li>{{ skill }}</li>
+        }
+      </ul>
+    </div>
+  }
+
+  @if (competences?.langues?.length) {
+    <div class="skills-section">
+      <h3>
+        {{ this.langService.language() == "fr" ? "Langues" : "Languages" }}
+      </h3>
+      <ul>
+        @for (lang of competences?.langues; track $index) {
+          <li>{{ lang.langue }} - {{ lang.niveau }}</li>
+        }
+      </ul>
+    </div>
+  }
+</div>
