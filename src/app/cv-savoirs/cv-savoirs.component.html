@@ -1,0 +1,19 @@
+<div class="cv-savoirs">
+  <h2>
+    {{ this.langService.language() == "fr" ? "Savoirs-faire" : "Hard skills" }}
+  </h2>
+  <ul>
+    @for (sf of savoirsFaire(); track $index) {
+      <li>⚙️ {{ sf }}</li>
+    }
+  </ul>
+
+  <h2>
+    {{ this.langService.language() == "fr" ? "Savoir-etre" : "Soft skills" }}
+  </h2>
+  <ul>
+    @for (se of savoirsEtre(); track $index) {
+      <li>🌟 {{ se }}</li>
+    }
+  </ul>
+</div>

@@ -1,7 +1,8 @@
-import { CvAtoutsComponent } from '../cv-atouts/cv-atouts.component';
 import { CvEducationComponent } from '../cv-education/cv-education.component';
 import { CvExperiencesComponent } from '../cv-experiences/cv-experiences.component';
+import { CvLoisirsComponent } from '../cv-loisirs/cv-loisirs.component';
 import { CvProjectsComponent } from '../cv-projects/cv-projects.component';
+import { CvSavoirsComponent } from '../cv-savoirs/cv-savoirs.component';
 import { CvSkillsComponent } from '../cv-skills/cv-skills.component';
 import { DesktopIconModel } from '../desktop-icon/desktop-icon.model';
 import { PdfViewerComponent } from '../pdf-viewer/pdf-viewer.component';
@@ -19,22 +20,12 @@ export const DESKTOP_ICONS: DesktopIconModel[] = [
   //   label_en: 'Portfolio',
   //   icon: '📁',
   // },
-  // {
-  //   label_fr: 'Savoirs-faire',
-  //   label_en: 'Hard-skills',
-  //   icon: '🛠',
-  // },
-  // {
-  //   label_fr: 'Savoirs-être',
-  //   label_en: 'Soft-skills',
-  //   icon: '🧠',
-  // },
   {
-    id: 'cv-atouts',
-    label_fr: 'Atouts',
-    label_en: 'Assets',
-    icon: '⭐',
-    component: CvAtoutsComponent,
+    id: 'cv-savoirs',
+    label_fr: 'Savoirs',
+    label_en: 'Soft & Hard skills',
+    icon: '🧠',
+    component: CvSavoirsComponent,
   },
   {
     id: 'cv-skills',
@@ -64,9 +55,11 @@ export const DESKTOP_ICONS: DesktopIconModel[] = [
     icon: '🎨',
     component: CvProjectsComponent,
   },
-  // {
-  //   label_fr: 'Loisirs',
-  //   label_en: 'Hobbies',
-  //   icon: '🎉',
-  // },
+  {
+    id: 'cv-loisirs',
+    label_fr: 'Loisirs',
+    label_en: 'Hobbies',
+    icon: '🎉',
+    component: CvLoisirsComponent,
+  },
 ];
