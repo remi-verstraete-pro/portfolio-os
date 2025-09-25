@@ -1,11 +1,7 @@
-import {
-  Component, EventEmitter, Output
-} from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import {
-  trigger, transition, style, animate
-} from '@angular/animations';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-login-screen',
@@ -16,14 +12,20 @@ import {
   animations: [
     trigger('slideScreen', [
       transition(':leave', [
-        animate('600ms ease-in', style({ transform: 'translateY(-100%)', opacity: 0 }))
+        animate(
+          '600ms ease-in',
+          style({ transform: 'translateY(-100%)', opacity: 0 }),
+        ),
       ]),
       transition(':enter', [
         style({ transform: 'translateY(100%)', opacity: 0 }),
-        animate('600ms ease-out', style({ transform: 'translateY(0)', opacity: 1 }))
-      ])
-    ])
-  ]
+        animate(
+          '600ms ease-out',
+          style({ transform: 'translateY(0)', opacity: 1 }),
+        ),
+      ]),
+    ]),
+  ],
 })
 export class LoginScreenComponent {
   @Output() login = new EventEmitter<string>();
@@ -37,7 +39,9 @@ export class LoginScreenComponent {
 
     const trimmed = this.username.trim();
     if (trimmed) {
-      localStorage.setItem('username', trimmed); // ✅ stocker
+      localStorage.setItem('username', trimmed);
+      localStorage.setItem('theme', 'dark');
+      localStorage.setItem('language', 'fr');
       this.loggedIn = true;
       setTimeout(() => this.login.emit(trimmed), 600);
     }
