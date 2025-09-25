@@ -77,12 +77,15 @@ export class TaskBarComponent {
 
   currentDate(): string {
     const d = new Date();
-    return d.toLocaleDateString('fr-FR', {
-      weekday: 'short',
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    });
+    return d.toLocaleDateString(
+      this.languageService.language() === 'fr' ? 'fr-FR' : 'en-US',
+      {
+        weekday: 'short',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      },
+    );
   }
 
   toggleStartMenu() {

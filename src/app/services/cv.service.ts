@@ -56,6 +56,7 @@ export interface Competences {
   base_de_donnees?: string[];
   outils_devops?: string[];
   methodologies?: string[];
+  securite?: string[];
   langues?: Langue[];
 }
 

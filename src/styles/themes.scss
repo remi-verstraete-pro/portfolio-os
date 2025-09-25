@@ -70,7 +70,7 @@
 .desktop-background {
   background: var(--desktop-wallpaper);
   background-size: 200% 200%;
-  animation: gradientShift 100s ease infinite;
+  animation: gradientShift 80s ease infinite;
 }
 
 @keyframes gradientShift {
