@@ -72,6 +72,19 @@
     </div>
   }
 
+  @if (competences?.securite?.length) {
+    <div class="skills-section">
+      <h3>
+        {{ this.langService.language() == "fr" ? "Securité" : "Security" }}
+      </h3>
+      <ul>
+        @for (skill of competences?.securite; track $index) {
+          <li>{{ skill }}</li>
+        }
+      </ul>
+    </div>
+  }
+
   @if (competences?.langues?.length) {
     <div class="skills-section">
       <h3>

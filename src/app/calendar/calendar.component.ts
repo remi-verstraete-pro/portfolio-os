@@ -1,22 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../core/language.service';
 
 @Component({
   selector: 'app-calendar',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './calendar.component.html',
-  styleUrl: './calendar.component.scss'
+  styleUrl: './calendar.component.scss',
 })
 export class CalendarComponent {
+  private langService = inject(LanguageService);
+
+  protected printedDays =
+    this.langService.language() === 'fr'
+      ? ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']
+      : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
   current = new Date();
   displayedDate = new Date();
 
   get monthYear(): string {
-    return this.displayedDate.toLocaleDateString('fr-FR', {
-      month: 'long',
-      year: 'numeric',
-    });
+    return this.displayedDate.toLocaleDateString(
+      this.langService.language() === 'fr' ? 'fr-FR' : 'en-US',
+      {
+        month: 'long',
+        year: 'numeric',
+      },
+    );
   }
 
   get weeks(): (Date | null)[][] {
@@ -57,10 +68,18 @@ export class CalendarComponent {
   }
 
   prevMonth() {
-    this.displayedDate = new Date(this.displayedDate.getFullYear(), this.displayedDate.getMonth() - 1, 1);
+    this.displayedDate = new Date(
+      this.displayedDate.getFullYear(),
+      this.displayedDate.getMonth() - 1,
+      1,
+    );
   }
 
   nextMonth() {
-    this.displayedDate = new Date(this.displayedDate.getFullYear(), this.displayedDate.getMonth() + 1, 1);
+    this.displayedDate = new Date(
+      this.displayedDate.getFullYear(),
+      this.displayedDate.getMonth() + 1,
+      1,
+    );
   }
 }
