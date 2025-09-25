@@ -36,9 +36,9 @@ export class WindowComponent implements AfterViewInit {
 
   private dragOffset = { x: 0, y: 0 };
   private resizeOrigin = { x: 0, y: 0 };
-  private initialSize = { width: 300, height: 200 };
+  private initialSize = { width: 800, height: 500 };
 
-  isMaximized = true;
+  isMaximized = false;
 
   constructor(private el: ElementRef) {}
 

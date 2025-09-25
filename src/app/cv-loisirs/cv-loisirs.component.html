@@ -1,0 +1,17 @@
+<div class="cv-loisirs">
+  <h2>{{ this.langService.language() == "fr" ? "Loisirs" : "Hobbies" }}</h2>
+  <ul>
+    @for (loisir of otherLoisirs(); track $index) {
+      <li>🎯 {{ loisir }}</li>
+    }
+  </ul>
+
+  @if (voyages().length) {
+    <h2>{{ this.langService.language() == "fr" ? "Voyages" : "Travel" }}</h2>
+    <ul>
+      @for (voyage of voyages(); track $index) {
+        <li>✈️ {{ voyage.pays }}</li>
+      }
+    </ul>
+  }
+</div>

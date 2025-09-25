@@ -89,7 +89,7 @@ export class DesktopComponent {
   }
 
   getWindowSize(id: DesktopIconModel): { width: number; height: number } {
-    return this.windowSizes()[id['icon']] || { width: 300, height: 200 };
+    return this.windowSizes()[id['icon']] || { width: 900, height: 500 };
   }
 
   getZIndex(id: DesktopIconModel): number {

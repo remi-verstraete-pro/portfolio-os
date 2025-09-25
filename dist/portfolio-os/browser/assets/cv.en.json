@@ -85,11 +85,11 @@
     }
   ],
   "informations_personnelles": {
-    "adresse": "Amiens, France",
+    "adresse": "2 rue Jeanne Natière, 80000 Amiens, FRANCE",
     "age": 27,
     "linkedin": "@remi-verstraete",
     "vehicule": "Personal vehicle",
-    "email": "remi.verstraete.pro [at] gmail [dot] com"
+    "telephone": "+33 7 78 38 81 61"
   },
   "competences": {
     "front_end": ["Angular (v9+)", "TypeScript", "HTML5", "CSS3", "SCSS"],
@@ -108,6 +108,14 @@
       }
     ]
   },
+  "atouts": [
+    "Attention to detail and rigor",
+    "Ability to work both in a team and independently",
+    "Adaptability to business constraints",
+    "Strong communication skills",
+    "Analytical mindset and problem solving",
+    "Technological curiosity"
+  ],
   "projets_personnels": [
     {
       "nom": "thesesalmabanana/accio-comments",
@@ -128,43 +136,6 @@
       "nom": "Thesebanana/analyse-sentiments-BERT",
       "description": "Interface for sentiment and emotion analysis on a dataset. Built with Streamlit and integration of various Hugging Face models",
       "url": "https://huggingface.co/spaces/Thesebanana/analyse-sentiments-BERT/tree/main"
-    }
-  ],
-  "savoirs_faire": [
-    "End-to-end management of web projects (from requirements analysis to production release)",
-    "Coordination of technical teams and business stakeholders",
-    "Design of robust and scalable software architectures",
-    "Implementation and monitoring of Agile/Scrum methodologies",
-    "Code quality management and enforcement of best practices (Clean Code, SOLID)",
-    "Planning and budget tracking",
-    "Drafting of technical and functional documentation"
-  ],
-  "savoirs_etre": [
-    "Leadership and ability to bring a team together",
-    "Excellent communication skills",
-    "Analytical and synthesis mindset",
-    "Ability to handle stress and unexpected events",
-    "Results-oriented with a strong focus on client satisfaction",
-    "Curiosity and continuous technology watch",
-    "Autonomy and sense of responsibility"
-  ],
-  "loisirs": [
-    "Video games",
-    "Board games",
-    "Reading books on medical science",
-    "Building with Legos",
-    "Exploring new technologies",
-    "Development of all kinds",
-    {
-      "Voyages": [
-        { "pays": "Mauritius" },
-        { "pays": "England" },
-        { "pays": "Portugal" },
-        { "pays": "Spain" },
-        { "pays": "Hungary" },
-        { "pays": "Morocco" },
-        { "pays": "Italy" }
-      ]
     }
   ]
 }

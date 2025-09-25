@@ -85,11 +85,11 @@
     }
   ],
   "informations_personnelles": {
-    "adresse": "Amiens, France",
+    "adresse": "2 rue Jeanne Natière, 80000 Amiens, FRANCE",
     "age": 27,
     "linkedin": "@remi-verstraete",
     "vehicule": "Véhicule personnel",
-    "email": "remi.verstraete.pro [at] gmail [dot] com"
+    "telephone": "07 78 38 81 61"
   },
   "competences": {
     "front_end": ["Angular (v9+)", "TypeScript", "HTML5", "CSS3", "SCSS"],
@@ -108,6 +108,14 @@
       }
     ]
   },
+  "atouts": [
+    "Rigueur et sens du détail",
+    "Capacité à travailler en équipe et en autonomie",
+    "Adaptabilité face aux contraintes métier",
+    "Bonne communication",
+    "Esprit d’analyse et résolution de problèmes",
+    "Curiosité technologique"
+  ],
   "projets_personnels": [
     {
       "nom": "thesesalmabanana/accio-comments",
@@ -128,43 +136,6 @@
       "nom": "Thesebanana/analyse-sentiments-BERT",
       "description": "Création d'une interface d'analyse de sentiments et d'émotions sur un jeu de données. Utilisation de Streamlit et intégration de divers modèles présents sur Hugging Face",
       "url": "https://huggingface.co/spaces/Thesebanana/analyse-sentiments-BERT/tree/main"
-    }
-  ],
-  "savoirs_faire": [
-    "Gestion de projets web de bout en bout (de l’analyse des besoins à la mise en production)",
-    "Coordination des équipes techniques et métiers",
-    "Conception d’architectures logicielles robustes et évolutives",
-    "Mise en place et suivi de méthodologies Agile/Scrum",
-    "Pilotage de la qualité du code et respect des bonnes pratiques (Clean Code, SOLID)",
-    "Élaboration et suivi des plannings et budgets",
-    "Rédaction de documentation technique et fonctionnelle"
-  ],
-  "savoirs_etre": [
-    "Leadership et capacité à fédérer une équipe",
-    "Excellentes compétences en communication",
-    "Esprit d’analyse et de synthèse",
-    "Capacité à gérer le stress et les imprévus",
-    "Orientation résultats et satisfaction client",
-    "Curiosité et veille technologique constante",
-    "Autonomie et sens des responsabilités"
-  ],
-  "loisirs": [
-    "Jeux vidéos",
-    "Jeux de société",
-    "Lecture de livres sur la science de la médecine",
-    "Fabrication de Legos",
-    "Découverte de nouvelles technologiques",
-    "Développement en tout genre",
-    {
-      "Voyages": [
-        { "pays": "Île Maurice" },
-        { "pays": "Angleterre" },
-        { "pays": "Portugal" },
-        { "pays": "Espagne" },
-        { "pays": "Hongrie" },
-        { "pays": "Maroc" },
-        { "pays": "Italie" }
-      ]
     }
   ]
 }
